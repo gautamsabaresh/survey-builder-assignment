@@ -1,4 +1,15 @@
-export const SAMPLE_SURVEY_QUESTIONS_JSON = {
+interface SampleSurveyType {
+    id: number;
+    code: string;
+    name: string;
+    description: string;
+    instructions: string;
+    thankyou: string;
+    copyright: string;
+    questions: Array<{[x: string]: any}>;
+}
+
+export const SAMPLE_SURVEY_QUESTIONS_JSON: SampleSurveyType = {
     "id": 1,
     "code": "sample",
     "name": "Sample Survey",
@@ -216,4 +227,11 @@ export const HOME_HEADER_NAV_LABELS = {
     HOME: 'Home',
     SURVEY: 'Sample Survey',
     SENSORY_PREFERENCES: 'Sensory Preferences'
+}
+
+export const QUESTION_TYPES = {
+    MCQ: 'mcq',
+    TEXTFIELD: 'cr',
+    LIKERT: 'likert',
+    SECTION: 'section'
 }
