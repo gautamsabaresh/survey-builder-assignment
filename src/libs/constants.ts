@@ -223,11 +223,21 @@ export const ROUTE_PATHS = {
     SENSORY_PREFERENCES: '/sensory-preferences'
 }
 
-export const HOME_HEADER_NAV_LABELS = {
-    HOME: 'Home',
-    SURVEY: 'Sample Survey',
-    SENSORY_PREFERENCES: 'Sensory Preferences'
-}
+
+export const HOME_HEADER_NAV = [
+    {
+        label: 'Home',
+        route: ROUTE_PATHS.HOME,
+    },
+    {
+        label: 'Sample Survey',
+        route: ROUTE_PATHS.SURVEY
+    },
+    {
+        label: 'Sensory Preferences',
+        route: ROUTE_PATHS.SENSORY_PREFERENCES
+    }
+];
 
 export const QUESTION_TYPES = {
     MCQ: 'mcq',
