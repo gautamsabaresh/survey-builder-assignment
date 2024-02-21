@@ -6,7 +6,7 @@ interface SampleSurveyType {
     instructions: string;
     thankyou: string;
     copyright: string;
-    questions: Array<{[x: string]: any}>;
+    questions: Array<{ [x: string]: any }>;
 }
 
 export const SAMPLE_SURVEY_QUESTIONS_JSON: SampleSurveyType = {
@@ -104,14 +104,14 @@ export const SAMPLE_SURVEY_QUESTIONS_JSON: SampleSurveyType = {
     ]
 }
 
-export const SPI_SURVEY_QUESTIONS_JSON = {
+export const SPI_SURVEY_QUESTIONS_JSON: SampleSurveyType = {
     "id": 2,
     "code": "inventory",
     "name": "Sensory Preferences Inventory",
     "description": "",
     "instructions": "Answer each question using the scale provided.",
     "thankyou": "Thank you for completing the a/A Sensory Preferences Inventory.",
-    "autoreport": "inventory-results",
+    // "autoreport": "inventory-results",
     "copyright": "&copy; 2020 a/A Forms, Inc. All rights reserved.",
     "questions": [
         {
@@ -218,7 +218,7 @@ export const SPI_SURVEY_QUESTIONS_JSON = {
 }
 
 export const ROUTE_PATHS = {
-    HOME: '/',
+    HOME: '/home',
     SURVEY: '/survey',
     SENSORY_PREFERENCES: '/sensory-preferences'
 }
@@ -237,6 +237,29 @@ export const HOME_HEADER_NAV = [
         label: 'Sensory Preferences',
         route: ROUTE_PATHS.SENSORY_PREFERENCES
     }
+];
+
+export const LIKERT_OPTIONS = [
+    {
+        value: 1,
+        text: 'Strongly Disagree'
+    },
+    {
+        value: 2,
+        text: 'Disagree'
+    },
+    {
+        value: 3,
+        text: 'Neutral'
+    },
+    {
+        value: 4,
+        text: 'Agree'
+    },
+    {
+        value: 5,
+        text: 'Strongly Agree'
+    },
 ];
 
 export const QUESTION_TYPES = {

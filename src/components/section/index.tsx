@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 
 const BaseSection = (props: any) => {
   return (
-    <Card sx={{ width: '100%' }}>
+    <Card sx={{ width: '100%', textAlign: 'center' }}>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {props?.title}
