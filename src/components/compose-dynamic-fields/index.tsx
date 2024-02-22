@@ -5,21 +5,17 @@ import { CONSTANTS } from '../../libs';
 import BaseSection from '../section';
 
 const ComposeDynamicField = (props: any) => {
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const { value } = event.target;
-        props.onChange(value);
-    };
     switch (props.type) {
         case CONSTANTS.QUESTION_TYPES.MCQ:
-            return <BaseRadioButtonsGroup {...props} onChange={handleChange}/>;
+            return <BaseRadioButtonsGroup {...props} />;
         case CONSTANTS.QUESTION_TYPES.LIKERT:
             const options = CONSTANTS.LIKERT_OPTIONS;
-            props = {...props, options};
-            return <BaseRadioButtonsGroup {...props} onChange={handleChange}/>;
+            props = { ...props, options };
+            return <BaseRadioButtonsGroup {...props} />;
         case CONSTANTS.QUESTION_TYPES.TEXTFIELD:
-            return <BaseTextField {...props} onChange={handleChange}/>;
+            return <BaseTextField {...props} />;
         case CONSTANTS.QUESTION_TYPES.SECTION:
-            return <BaseSection {...props}/>
+            return <BaseSection {...props} />
         default:
             return null;
     }
